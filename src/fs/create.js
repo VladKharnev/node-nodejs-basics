@@ -6,7 +6,7 @@ const create = async () => {
   const __filename = url.fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   const filePath = path.join(__dirname, "files", "fresh.txt");
-  fs.stat(filePath, function(err, stat) {
+  fs.stat(filePath, function(err) {
     if(err == null) {
         console.log('FS operation failed');
     } else if(err.code == 'ENOENT') {
